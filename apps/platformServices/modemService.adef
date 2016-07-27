@@ -21,7 +21,7 @@ bundles:
 bindings:
 {
     modemDaemon.modemDaemon.le_pm -> powerMgr.le_pm
-    modemDaemon.le_pa.le_atClient -> atService.le_atClient
+    modemDaemon.le_pa.le_atClient -> atClient.le_atClient
 }
 
 requires:
