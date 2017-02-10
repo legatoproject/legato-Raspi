@@ -4,6 +4,8 @@
 // Copyright (C) Sierra Wireless Inc.
 //--------------------------------------------------------------------------------------------------
 
+#include "$LEGATO_ROOT/legatoTargetConfig.sinc"
+
 apps:
 {
     // Platform services.
