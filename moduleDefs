@@ -1,7 +1,7 @@
 export LEGATO_RASPI_ROOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 
 # Only use on raspi
-ifeq ($(subst tests_,,$(MAKECMDGOALS)),raspi)
+ifeq ($(TARGET),raspi)
 
   # Override the default sdef file to use the MangOH one
   export SDEF_TO_USE = $(LEGATO_RASPI_ROOT)/raspi.sdef
