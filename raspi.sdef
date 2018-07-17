@@ -20,7 +20,7 @@ apps:
     $LEGATO_ROOT/apps/platformServices/cellNetService
     $LEGATO_ROOT/apps/platformServices/dataConnectionService
     $LEGATO_ROOT/apps/platformServices/fwupdateService
-    $LEGATO_RASPI_ROOT/apps/platformServices/modemService
+    $LEGATO_SDEF_ROOT/apps/platformServices/modemService
     $LEGATO_ROOT/apps/platformServices/positioningService
     $LEGATO_ROOT/apps/platformServices/powerMgr
     $LEGATO_ROOT/apps/platformServices/secStore
