@@ -6,10 +6,16 @@
 
 #include "$LEGATO_ROOT/legatoTargetConfig.sinc"
 
+#include "$LEGATO_ROOT/apps/platformServices/defaultAirVantage.sinc"
+#include "$LEGATO_ROOT/apps/platformServices/defaultAtCommands.sinc"
+#if ${LEGATO_EXTRA_SINC} = ""
+#else
+    #include "$LEGATO_EXTRA_SINC"
+#endif
+
 apps:
 {
     // Platform services.
-    $LEGATO_ROOT/apps/platformServices/airVantage/avcService
     $LEGATO_ROOT/apps/platformServices/audioService
     $LEGATO_ROOT/apps/platformServices/cellNetService
     $LEGATO_ROOT/apps/platformServices/dataConnectionService
@@ -33,6 +39,9 @@ commands:
     fwupdate = tools:/bin/fwupdate
     secstore = tools:/bin/secstore
     pmtool = tools:/bin/pmtool
+    gnss = tools:/bin/gnss
+    uartMode = tools:/bin/uartMode
+    kmod = tools:/bin/kmod
 }
 
 bindings:
@@ -42,7 +51,7 @@ bindings:
 
 interfaceSearch:
 {
-    interfaces/modemServices
-    interfaces/positioning
-    interfaces/atServices
+    $LEGATO_ROOT/interfaces/modemServices
+    $LEGATO_ROOT/interfaces/positioning
+    $LEGATO_ROOT/interfaces/atServices
 }
