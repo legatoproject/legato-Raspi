@@ -4,4 +4,5 @@
 bindings:
 {
     modemDaemon.le_pa.le_atClient -> atService.le_atClient
+    modemDaemon.le_pa_utils.le_atClient -> atService.le_atClient
 }
